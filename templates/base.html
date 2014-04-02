@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Shipdex{% endblock %}</title>
+	
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+	
+	<div class="container">
+{% block content %}
+	<h1>Oops!</h1>
+	<p>
+		Looks like someone forgot to override the 'content' block.<br />
+		If you're not me, this means I've been coding at the wee hours in the morning and done something really dumb.<br />
+		Please give me a slap from my awake self, along with the URL to this page.
+	</p>
+{% endblock %}
+	</div>
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
