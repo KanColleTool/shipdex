@@ -1,6 +1,6 @@
 import sys, os
-import requests
 import json
+import requests
 
 try:
 	from keys import *
@@ -26,26 +26,52 @@ except Exception, e:
 	print "         missing and your deck full of nothing but NAKA-CHAN DAYO."
 	sys.exit()
 
+
+
+# 
+# Global Variables
+# 
 s = requests.Session()
 s.headers.update({'Referer': 'http://%s/kcs/mainD2.swf?api_token=%s' % (KANCOLLE_API_SERVER, KANCOLLE_API_TOKEN)})
 
 ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
+
+
+# 
+# Helpers
+# 
 def strip_prefix(prefix, s):
 	return s if not s.startswith(prefix) else s[len(prefix):]
+
+def save_data(data, filename):
+	outpath = os.path.join(ROOT_PATH, 'data', filename)
+	outdir = os.path.dirname(outpath)
+	if not os.path.exists(outdir):
+		os.makedirs(outdir)
+	
+	with open(outpath, 'w') as f:
+		f.write(json.dumps(data, ensure_ascii=False, indent=4, separators=(',', ': ')).encode('utf-8'))
+
+
+
+# 
+# Fetching stuff
+# 
+def fetch_translation():
+	r = requests.get('http://api.comeonandsl.am/translation/en/')
+	data = r.json()
+	save_data(data['translation'], 'translation.json')
 
 def fetch_endpoint(endpoint, save=True):
 	r = s.post('http://%s/kcsapi/%s' % (KANCOLLE_API_SERVER, endpoint), data={'api_token': KANCOLLE_API_TOKEN, 'api_verno': 1});
 	data = json.loads(strip_prefix('svdata=', r.text).decode('unicode-escape'))
 	
 	if save:
-		outpath = os.path.join(ROOT_PATH, 'data', endpoint + '.json')
-		outdir = os.path.dirname(outpath)
-		if not os.path.exists(outdir):
-			os.makedirs(outdir)
-		
-		with open(outpath, 'w') as f:
-			f.write(json.dumps(data, ensure_ascii=False, indent=4, separators=(',', ': ')).encode('utf-8'))
+		save_data(data, endpoint + '.json')
+
+
 
 if __name__ == '__main__':
+	fetch_translation()
 	fetch_endpoint('api_get_master/ship')
