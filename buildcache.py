@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf-8
 import sys, os
 import json
 import zlib
@@ -42,7 +44,28 @@ def build_translation_cache():
 		if filename.endswith('.json'):
 			translate_json_file(os.path.join(u'api_get_master', filename))
 
+def build_ship_cache():
+	ships = load_data(u'cache', u'api_get_master/ship.json')
+	name_to_id = {}
+	for item in ships:
+		# There's a whole lot of placeholder ships just called just "なし".
+		# I don't know why, and I don't think I want to, because the answer
+		# would probably make me bang my head against my desk, and that'd
+		# be an awful waste of a perfectly good desk.
+		if item['api_name'] == u'なし':
+			continue
+		
+		data = {
+			"data": item
+			# TODO: Versioning
+		}
+		name_to_id[item['api_name']] = item['api_id']
+		save_data('cache', data, 'ships/{id}.json'.format(id=item['api_id']))
+	
+	save_data('cache', name_to_id, 'name_to_id.json')
+
 
 
 if __name__ == '__main__':
-	build_translation_cache()
+	#build_translation_cache()
+	build_ship_cache()
