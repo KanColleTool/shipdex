@@ -3,6 +3,12 @@ from util import *
 
 app = Flask(__name__)
 
+@app.context_processor
+def expose_functions():
+	return {
+		'normalize_name': normalize_name
+	}
+
 @app.route('/')
 def index():
 	ships = load_data('cache', 'ships.json')

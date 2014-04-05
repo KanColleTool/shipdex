@@ -3,7 +3,7 @@
 <h1>Shipdex</h1>
 <ul class="nav nav-pills nav-stacked">
 	{% for ship in ships -%}
-	<li><a href="{{ url_for('ship', name=ship.api_name) }}">{{ ship.api_name }}</a></li>
+	<li><a href="{{ url_for('ship', name=normalize_name(ship.api_name)) }}">{{ ship.api_name }}</a></li>
 	{%- endfor %}
 </ul>
 {% endblock %}
