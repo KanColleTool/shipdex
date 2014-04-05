@@ -1,0 +1,2 @@
+FREEZER_DESTINATION_IGNORE = ['.git*']
+
