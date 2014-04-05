@@ -24,5 +24,5 @@ def save_data(basedir, data, filename, pretty=True):
 		f.write(json.dumps(data, ensure_ascii=False, **dumpsparams).encode('utf-8'))
 
 def load_data(basedir, filename):
-	with open(os.path.join(ROOT_PATH, basedir, filename)) as f:
+	with open(os.path.join(unicode(ROOT_PATH), unicode(basedir), unicode(filename))) as f:
 		return json.loads(strip_prefix("svdata=", f.read()))
