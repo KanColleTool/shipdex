@@ -6,6 +6,9 @@ ROOT_PATH = unicode(os.path.dirname(os.path.abspath(__file__)))
 def strip_prefix(prefix, s):
 	return s if not s.startswith(prefix) else s[len(prefix):]
 
+def normalize_name(name):
+	return name.lower().replace(' ', '_')
+
 def save_data(basedir, data, filename, pretty=True):
 	outpath = os.path.join(ROOT_PATH, basedir, filename)
 	outdir = os.path.dirname(outpath)
