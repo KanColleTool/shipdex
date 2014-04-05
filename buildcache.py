@@ -29,10 +29,7 @@ def translate(thing):
 
 def translate_json_file(path):
 	print "-> Translating %s..." % path
-	data = {}
-	with open(path) as f:
-		data = json.loads(f.read())
-	
+	data = load_data(u'data', path)
 	data = translate(data['api_data'])
 	save_data('cache', data, path)
 
@@ -43,7 +40,9 @@ def build_translation_cache():
 	print "Building TL cache of %s..." % d
 	for filename in os.listdir(os.path.join(ROOT_PATH, d)):
 		if filename.endswith('.json'):
-			translate_json_file(os.path.join(d, filename))
+			translate_json_file(os.path.join(u'api_get_master', filename))
+
+
 
 if __name__ == '__main__':
 	build_translation_cache()
