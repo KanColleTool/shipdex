@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Title</h1>
-<p>
-	Lorem ipsum dolor sit amet
-</p>
+<h1>Shipdex</h1>
+<ul class="nav nav-pills nav-stacked">
+	{% for ship in ships -%}
+	<li><a href="{{ url_for('ship', name=ship.api_name) }}">{{ ship.api_name }}</a></li>
+	{%- endfor %}
+</ul>
 {% endblock %}

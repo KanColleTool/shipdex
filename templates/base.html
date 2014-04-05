@@ -8,27 +8,20 @@
 </head>
 <body>
 	
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="{{ url_for('index') }}">Shipdex</a>
-			</div>
-			
-			<div class="collapse navbar-collapse" id="navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url_for('ships') }}">Ships</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
 	<div class="container">
+	
+	<ol class="breadcrumb">
+		{% for item in breadcrumb %}
+			<li{% if loop.last %} class="active"{% endif %}>{% if not loop.last %}<a href="{{ item.0 }}">{{ item.1 }}</a>{% else %}{{ item }}{% endif %}</li>
+		{% endfor %}
+	</ol>
+	
+	<p>
+		<strong>NOTE:</strong><br />
+		This is a beta. Everything is subject to change.<br />
+		Put <a href="https://github.com/KanColleTool/shipdex/issues/" target="_blank">the issue tracker</a> to work with all your complaints and opinions.
+	</p>
+	
 {% block content %}
 	<h1>Oops!</h1>
 	<p>
