@@ -6,7 +6,8 @@ app = Flask(__name__)
 @app.context_processor
 def expose_functions():
 	return {
-		'normalize_name': normalize_name
+		'normalize_name': normalize_name,
+		'sum': sum
 	}
 
 @app.route('/')
