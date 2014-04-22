@@ -30,20 +30,22 @@ def translate(thing):
 	return thing
 
 def translate_json_file(path):
-	print "-> Translating %s..." % path
 	data = load_data(u'data', path)
 	data = translate(data['api_data'])
 	save_data('cache', data, path)
+	print "-> Translated %s" % path
 
 
 
 def build_translation_cache():
+	print "Translating data files..."
 	d = os.path.join(u'data', u'api_get_master')
 	for filename in os.listdir(os.path.join(ROOT_PATH, d)):
 		if filename.endswith('.json'):
 			translate_json_file(os.path.join(u'api_get_master', filename))
 
 def build_ship_cache():
+	print "Compiling ship data..."
 	raw_ships = load_data(u'cache', u'api_get_master/ship.json')
 	ships = {}
 	for item in raw_ships:
@@ -69,6 +71,7 @@ def build_ship_cache():
 			del baseships[ship['api_aftershipid']]
 	
 	# Collect all ships of the same 'evolutionary line' together
+	family_counter = 0
 	for ship in baseships.itervalues():
 		line = []
 		current_item = ship
@@ -78,9 +81,12 @@ def build_ship_cache():
 				current_item = ships[int(current_item['api_aftershipid'])]
 			else:
 				break
+		family_counter = family_counter + 1
 		save_data('cache', line, u'ships/{name}.json'.format(name=normalize_name(ship['api_name'])))
+	print "-> {count} ship data files written".format(count=family_counter)
 	
 	save_data('cache', ships, 'ships.json', False)	# Make sure to minify this!
+	print "-> Index written"
 
 
 
