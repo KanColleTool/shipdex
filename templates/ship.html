@@ -7,19 +7,6 @@
 {% block content %}
 <h1>{{ ship.api_name }}</h1>
 
-<dl class="dl-horizontal">
-	{{ print_stat_minmax("HP", *ship.api_souk) }}
-	{{ print_stat_minmax("Armor", *ship.api_souk) }}
-	{{ print_stat_minmax("Firepower", *ship.api_houg) }}
-	{{ print_stat_minmax("Torpedo", *ship.api_raig) }}
-	{{ print_stat_minmax("Anti-Air", *ship.api_tyku) }}
-	{{ print_stat_minmax("Anti-Sub", *ship.api_tais) }}
-	{{ print_stat("Aircraft", sum(ship.api_maxeq)) }}
-	{{ print_stat_minmax("Evasion", *ship.api_kaih) }}
-	{{ print_stat_minmax("Line of Sight", *ship.api_saku) }}
-	{{ print_stat("Luck", ship.api_luck.0) }}
-	{{ print_stat("Speed", speed_string(ship.api_soku)) }}
-	{{ print_stat("Range", range_string(ship.api_leng)) }}
-</dl>
+{% include "_ship.html" %}
 
 {% endblock %}

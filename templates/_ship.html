@@ -1,0 +1,37 @@
+{% import "_macros.html" as m %}
+{% macro _print_stat(stat, min, max=-1) %}
+	<th>{{ m.statimg(stat) }}</th>
+	<td>{{ min }}{% if max != -1 %}&nbsp;({{ max }}){% endif %}</td>
+{% endmacro %}
+<div class="ship rarity-{{ ship.api_rarity }}">
+	<header>
+		<h2>{{ ship.api_name }}</h2>
+	</header>
+	
+	<table class="table">
+		<tr>
+			{{ _print_stat("HP", *ship.api_souk) }}
+			{{ _print_stat("Firepower", *ship.api_houg) }}
+		</tr>
+		<tr>
+			{{ _print_stat("Armor", *ship.api_souk) }}
+			{{ _print_stat("Torpedo", *ship.api_raig) }}
+		</tr>
+		<tr>
+			{{ _print_stat("Evasion", *ship.api_kaih) }}
+			{{ _print_stat("Anti-Air", *ship.api_tyku) }}
+		</tr>
+		<tr>
+			{{ _print_stat("Aircraft", sum(ship.api_maxeq)) }}
+			{{ _print_stat("Anti-Sub", *ship.api_tais) }}
+		</tr>
+		<tr>
+			{{ _print_stat("Speed", speed_string(ship.api_soku)) }}
+			{{ _print_stat("Line of Sight", *ship.api_saku) }}
+		</tr>
+		<tr>
+			{{ _print_stat("Luck", ship.api_luck.0) }}
+			{{ _print_stat("Range", range_string(ship.api_leng)) }}
+		</tr>
+	</table>
+</div>
