@@ -1,4 +1,4 @@
-from collections import OrderedDict
+from operator import itemgetter
 from flask import Flask, render_template, url_for, g
 from util import *
 from tplhelpers import *
@@ -18,29 +18,27 @@ def expose_functions():
 @app.route('/')
 def index():
 	ships = load_data('cache', 'ships.json')
-	displayships = OrderedDict()
+	filtered_ships = {}
 	
 	# Order the display dictionary by ID, numerically
 	# JSON doesn't let you use numbers as keys, so this is necessary
-	for sid in sorted([int(sid_) for sid_ in ships.keys()]):
-		ship = ships[str(sid)]
-		
+	for sid, ship in ships.iteritems():
 		# Filter out Abyssal ships for now, until I have a
 		# way to present them separately from allied ships
 		if ship['api_getmes'] == '':
 			continue
 		
-		displayships[sid] = ship
+		filtered_ships[sid] = ship
 	
-	# Filter out anything with an api_aftershipid, as remodels
-	# should go on the same page as their base forms
-	for sid, ship in ships.iteritems():
-		
-		afterid = int(ship['api_aftershipid'])
-		if afterid != 0 and afterid in displayships:
-			del displayships[afterid]
+	# Filter out anything referenced by an api_aftershipid, as
+	# remodels should go on the same page as their base forms
+	for ship in ships.itervalues():
+		afterid = ship['api_aftershipid']
+		if afterid != '0' and afterid in filtered_ships:
+			del filtered_ships[afterid]
 	
-	return render_template('index.html', ships=displayships, breadcrumb=['Home'])
+	shiplist = sorted(filtered_ships.values(), key=itemgetter('api_name'))
+	return render_template('index.html', ships=shiplist, breadcrumb=['Home'])
 
 @app.route('/s/<name>/')
 def ship(name):

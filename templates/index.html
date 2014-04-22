@@ -18,7 +18,7 @@
 		<th>{{ m.statimg("Range") }}</th>
 	</thead>
 	<tbody>
-		{% for ship in ships.itervalues() -%}
+		{% for ship in ships -%}
 		<tr>
 			<th><a href="{{ url_for('ship', name=normalize_name(ship.api_name)) }}">{{ ship.api_name }}</a></th>
 			<td>{{ ship.api_souk.1 }}</td>
