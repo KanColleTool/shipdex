@@ -1,13 +1,45 @@
 {% extends "base.html" %}
+{% import "_macros.html" as m %}
 {% block content %}
 <h1>Shipdex</h1>
-<ul class="nav nav-pills nav-stacked">
-	{% for item in ships|dictsort -%}
-	{% with ship = item[1] -%}
-	<li><a href="{{ url_for('ship', name=normalize_name(ship.api_name)) }}">{{ ship.api_name }}</a></li>
-	{% endwith -%}
-	{% endfor %}
-</ul>
+<table class="table">
+	<thead>
+		<th>Name</th>
+		<th>{{ m.statimg("HP") }}</th>
+		<th>{{ m.statimg("Armor") }}</th>
+		<th>{{ m.statimg("Firepower") }}</th>
+		<th>{{ m.statimg("Torpedo") }}</th>
+		<th>{{ m.statimg("Anti-Air") }}</th>
+		<th>{{ m.statimg("Anti-Sub") }}</th>
+		<th>{{ m.statimg("Aircraft") }}</th>
+		<th>{{ m.statimg("Evasion") }}</th>
+		<th>{{ m.statimg("Line of Sight") }}</th>
+		<th>{{ m.statimg("Luck") }}</th>
+		<th>{{ m.statimg("Speed") }}</th>
+		<th>{{ m.statimg("Range") }}</th>
+	</thead>
+	<tbody>
+		{% for item in ships|dictsort -%}
+		{% with ship = item[1] -%}
+		<tr>
+			<th><a href="{{ url_for('ship', name=normalize_name(ship.api_name)) }}">{{ ship.api_name }}</a></th>
+			<td>{{ ship.api_souk.1 }}</td>
+			<td>{{ ship.api_souk.1 }}</td>
+			<td>{{ ship.api_houg.1 }}</td>
+			<td>{{ ship.api_raig.1 }}</td>
+			<td>{{ ship.api_tyku.1 }}</td>
+			<td>{{ ship.api_tais.1 }}</td>
+			<td>{{ sum(ship.api_maxeq) }}</td>
+			<td>{{ ship.api_kaih.1 }}</td>
+			<td>{{ ship.api_saku.1 }}</td>
+			<td>{{ ship.api_luck.0 }}</td>
+			<td>{{ speed_string(ship.api_soku) }}</td>
+			<td>{{ range_string(ship.api_leng) }}</td>
+		</li>
+		{% endwith -%}
+		{% endfor %}
+	</tbody>
+</table>
 
 <div id="footer">
 	<p class="small text-right">

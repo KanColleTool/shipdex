@@ -1,6 +1,7 @@
+from collections import OrderedDict
 from flask import Flask, render_template, url_for, g
 from util import *
-from collections import OrderedDict
+from tplhelpers import *
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -9,7 +10,9 @@ app.config.from_object('config')
 def expose_functions():
 	return {
 		'normalize_name': normalize_name,
-		'sum': sum
+		'sum': sum,
+		'speed_string': speed_string,
+		'range_string': range_string
 	}
 
 @app.route('/')
