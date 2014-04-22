@@ -17,14 +17,6 @@
 	padding: 8px;
 }
 
-@media (min-width: 500px) {
-	.ship {
-		max-width: 300px;
-		float: left;
-		margin-right: 10px;
-	}
-}
-
 @media (max-width: 768px) {
 	#all-ships thead, #all-ships td {
 		display: none;
