@@ -65,7 +65,7 @@ def build_ship_cache():
 		ships[item['api_id']] = item
 	
 	# Collect all 'base' ships, eg. un-remodeled models
-	baseships = {k:v for k,v in ships.iteritems()}
+	baseships = ships.copy()
 	for ship in ships.itervalues():
 		if ship['api_aftershipid'] != '0' and ship['api_aftershipid'] in baseships:
 			del baseships[ship['api_aftershipid']]
