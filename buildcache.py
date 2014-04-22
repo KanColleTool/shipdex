@@ -4,6 +4,7 @@ import sys, os
 import json
 import zlib
 import ctypes
+import re
 from util import *
 
 tldata = None
@@ -46,22 +47,36 @@ def build_translation_cache():
 
 def build_ship_cache():
 	print "Compiling ship data..."
+	
+	# Exclude なし (placeholder) ships, alternate forms and old event ships
+	# Note that these are regex patterns, not string literals
+	excluded_name = [ur'なし', ur'S-Naka']
+	excluded_yomi = [ur'アル(.+)', ur'mist(.+)']
+	
+	# Compile them
+	excluded_name = [re.compile(pattern) for pattern in excluded_name]
+	excluded_yomi = [re.compile(pattern) for pattern in excluded_yomi]
+	
 	raw_ships = load_data(u'cache', u'api_get_master/ship.json')
 	ships = {}
 	for item in raw_ships:
-		# There's a whole lot of placeholder ships just called just "なし".
-		# I don't know why, and I don't think I want to, because the answer
-		# would probably make me bang my head against my desk, and that'd
-		# be an awful waste of a perfectly good desk.
-		if item['api_name'] == u'なし':
-			continue
+		skip = False
 		
-		# Also skip Mist ships
-		if item['api_yomi'][:2] == u'アル' or item['api_yomi'][:4] == u'mist':
+		# Apply filters
+		for pattern in excluded_name:
+			if pattern.search(item['api_name']):
+				skip = True
+		
+		for pattern in excluded_yomi:
+			if pattern.search(item['api_yomi']):
+				skip = True
+		
+		if skip:
 			continue
 		
 		# TODO: Versioning
 		
+		# Store any items that pass
 		ships[item['api_id']] = item
 	
 	# Collect all 'base' ships, eg. un-remodeled models
