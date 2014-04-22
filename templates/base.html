@@ -12,6 +12,10 @@
 	
 	<div class="container">
 	
+	<div class="page-header">
+		<h1>{% block header %}{% endblock %}</h1>
+	</div>
+	
 	<ol class="breadcrumb">
 		{% for item in breadcrumb %}
 			<li{% if loop.last %} class="active"{% endif %}>{% if not loop.last %}<a href="{{ item.0 }}">{{ item.1 }}</a>{% else %}{{ item }}{% endif %}</li>

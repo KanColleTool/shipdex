@@ -1,12 +1,6 @@
 {% extends "base.html" %}
-{% macro print_stat(name, data) %}
-	<dt>{{ name|safe }}</dt>
-	<dd>{{ data|safe }}</dd>
-{% endmacro %}
-{% macro print_stat_minmax(name, min, max) %}{{ print_stat(name, "%s <em>(%s)</em>" % (min, max)) }}{% endmacro %}
+{% block header %}{{ ship.api_name }}{% endblock %}
 {% block content %}
-<h1>{{ ship.api_name }}</h1>
-
 {% include "_ship.html" %}
 
 {% endblock %}
