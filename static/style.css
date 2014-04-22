@@ -1,3 +1,14 @@
+#report-link {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	opacity: 0.5;
+	font-size: 85%;
+}
+#report-link:hover {
+	opacity: 1;
+}
+
 #all-ships tbody th {
 	padding: 0;
 }
