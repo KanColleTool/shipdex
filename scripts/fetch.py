@@ -4,7 +4,7 @@ import requests
 from util import *
 
 try:
-	from keys import *
+	from ..keys import *
 except Exception, e:
 	print "To use this, you first have to create a file called 'keys.py' in the"
 	print "application directory. Then look at your API Link:"
