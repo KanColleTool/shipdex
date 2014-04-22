@@ -57,7 +57,7 @@ def build_ship_cache():
 			continue
 		
 		# Also skip Mist ships
-		if item['api_yomi'][:4] == 'mist':
+		if item['api_yomi'][:2] == u'アル' or item['api_yomi'][:4] == u'mist':
 			continue
 		
 		# TODO: Versioning
