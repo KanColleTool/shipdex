@@ -42,7 +42,7 @@ def index():
 	
 	return render_template('index.html', ships=displayships, breadcrumb=['Home'])
 
-@app.route('/<name>/')
+@app.route('/s/<name>/')
 def ship(name):
 	ship = load_data('cache', u'ships/{name}.json'.format(name=normalize_name(name)))
 	return render_template('ship.html', ship=ship, breadcrumb=[(url_for('index'), 'Home'), ship[0]['api_name']])
