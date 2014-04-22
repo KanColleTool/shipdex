@@ -45,7 +45,7 @@ def index():
 @app.route('/<name>/')
 def ship(name):
 	ship = load_data('cache', u'ships/{name}.json'.format(name=normalize_name(name)))
-	return render_template('ship.html', ship=ship, breadcrumb=[(url_for('index'), 'Home'), ship['api_name']])
+	return render_template('ship.html', ship=ship, breadcrumb=[(url_for('index'), 'Home'), ship[0]['api_name']])
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')

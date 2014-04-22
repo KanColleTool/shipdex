@@ -1,7 +1,12 @@
 {% extends "base.html" %}
-{% block title %}{{ ship.api_name }} | Shipdex{% endblock %}
-{% block header %}{{ ship.api_name }}{% endblock %}
+{% block title %}{{ ship[0].api_name }} | Shipdex{% endblock %}
+{% block header %}{{ ship[0].api_name }}{% endblock %}
 {% block content %}
-{% include "_ship.html" %}
+
+{% for stage in ship %}
+{% with ship=stage %}
+	{% include "_ship.html" %}
+{% endwith %}
+{% endfor %}
 
 {% endblock %}

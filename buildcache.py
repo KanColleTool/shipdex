@@ -54,10 +54,31 @@ def build_ship_cache():
 		if item['api_name'] == u'なし':
 			continue
 		
+		# Also skip Mist ships
+		if item['api_yomi'][:4] == 'mist':
+			continue
+		
 		# TODO: Versioning
 		
 		ships[item['api_id']] = item
-		save_data('cache', item, u'ships/{name}.json'.format(name=normalize_name(item['api_name'])))
+	
+	# Collect all 'base' ships, eg. un-remodeled models
+	baseships = {k:v for k,v in ships.iteritems()}
+	for ship in ships.itervalues():
+		if ship['api_aftershipid'] != '0' and ship['api_aftershipid'] in baseships:
+			del baseships[ship['api_aftershipid']]
+	
+	# Collect all ships of the same 'evolutionary line' together
+	for ship in baseships.itervalues():
+		line = []
+		current_item = ship
+		while True:
+			line.append(current_item)
+			if current_item['api_aftershipid'] != '0':
+				current_item = ships[int(current_item['api_aftershipid'])]
+			else:
+				break
+		save_data('cache', line, u'ships/{name}.json'.format(name=normalize_name(ship['api_name'])))
 	
 	save_data('cache', ships, 'ships.json', False)	# Make sure to minify this!
 
