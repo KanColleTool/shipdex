@@ -20,6 +20,8 @@
 @media (min-width: 500px) {
 	.ship {
 		max-width: 300px;
+		float: left;
+		margin-right: 10px;
 	}
 }
 
