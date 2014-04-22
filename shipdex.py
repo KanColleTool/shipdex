@@ -1,5 +1,6 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, g
 from util import *
+from collections import OrderedDict
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -14,7 +15,29 @@ def expose_functions():
 @app.route('/')
 def index():
 	ships = load_data('cache', 'ships.json')
-	return render_template('index.html', ships=ships, breadcrumb=['Home'])
+	displayships = OrderedDict()
+	
+	# Order the display dictionary by ID, numerically
+	# JSON doesn't let you use numbers as keys, so this is necessary
+	for sid in sorted([int(sid_) for sid_ in ships.keys()]):
+		ship = ships[str(sid)]
+		
+		# Filter out Abyssal ships for now, until I have a
+		# way to present them separately from allied ships
+		if ship['api_getmes'] == '':
+			continue
+		
+		displayships[sid] = ship
+	
+	# Filter out anything with an api_aftershipid, as remodels
+	# should go on the same page as their base forms
+	for sid, ship in ships.iteritems():
+		
+		afterid = int(ship['api_aftershipid'])
+		if afterid != 0 and afterid in displayships:
+			del displayships[afterid]
+	
+	return render_template('index.html', ships=displayships, breadcrumb=['Home'])
 
 @app.route('/<name>/')
 def ship(name):

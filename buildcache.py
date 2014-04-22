@@ -46,7 +46,7 @@ def build_translation_cache():
 
 def build_ship_cache():
 	raw_ships = load_data(u'cache', u'api_get_master/ship.json')
-	ships = []
+	ships = {}
 	for item in raw_ships:
 		# There's a whole lot of placeholder ships just called just "なし".
 		# I don't know why, and I don't think I want to, because the answer
@@ -57,7 +57,7 @@ def build_ship_cache():
 		
 		# TODO: Versioning
 		
-		ships.append(item)
+		ships[item['api_id']] = item
 		save_data('cache', item, u'ships/{name}.json'.format(name=normalize_name(item['api_name'])))
 	
 	save_data('cache', ships, 'ships.json', False)	# Make sure to minify this!

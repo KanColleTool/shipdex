@@ -2,8 +2,10 @@
 {% block content %}
 <h1>Shipdex</h1>
 <ul class="nav nav-pills nav-stacked">
-	{% for ship in ships -%}
+	{% for item in ships|dictsort -%}
+	{% with ship = item[1] -%}
 	<li><a href="{{ url_for('ship', name=normalize_name(ship.api_name)) }}">{{ ship.api_name }}</a></li>
-	{%- endfor %}
+	{% endwith -%}
+	{% endfor %}
 </ul>
 {% endblock %}
