@@ -1,5 +1,9 @@
-#all-ships a {
+#all-ships th {
+	padding: 0;
+}
+#all-ships th a {
 	display: block;
+	padding: 8px;
 }
 
 @media (max-width: 768px) {
