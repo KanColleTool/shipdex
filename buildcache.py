@@ -39,7 +39,6 @@ def translate_json_file(path):
 
 def build_translation_cache():
 	d = os.path.join(u'data', u'api_get_master')
-	print "Building TL cache of %s..." % d
 	for filename in os.listdir(os.path.join(ROOT_PATH, d)):
 		if filename.endswith('.json'):
 			translate_json_file(os.path.join(u'api_get_master', filename))
@@ -65,5 +64,5 @@ def build_ship_cache():
 
 
 if __name__ == '__main__':
-	#build_translation_cache()
+	build_translation_cache()
 	build_ship_cache()
