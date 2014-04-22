@@ -85,7 +85,7 @@ def build_ship_cache():
 		save_data('cache', line, u'ships/{name}.json'.format(name=normalize_name(ship['api_name'])))
 	print "-> {count} ship data files written".format(count=family_counter)
 	
-	save_data('cache', ships, 'ships.json', False)	# Make sure to minify this!
+	save_data('cache', ships, 'ships.json')
 	print "-> Index written"
 
 
