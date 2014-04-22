@@ -18,8 +18,7 @@
 		<th>{{ m.statimg("Range") }}</th>
 	</thead>
 	<tbody>
-		{% for item in ships|dictsort -%}
-		{% with ship = item[1] -%}
+		{% for ship in ships.itervalues() -%}
 		<tr>
 			<th><a href="{{ url_for('ship', name=normalize_name(ship.api_name)) }}">{{ ship.api_name }}</a></th>
 			<td>{{ ship.api_souk.1 }}</td>
@@ -35,7 +34,6 @@
 			<td>{{ speed_string(ship.api_soku) }}</td>
 			<td>{{ range_string(ship.api_leng) }}</td>
 		</li>
-		{% endwith -%}
 		{% endfor %}
 	</tbody>
 </table>
