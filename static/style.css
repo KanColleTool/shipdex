@@ -1,0 +1,9 @@
+#all-ships a {
+	display: block;
+}
+
+@media (max-width: 768px) {
+	#all-ships thead, #all-ships td {
+		display: none;
+	}
+}
