@@ -1,0 +1,5485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Shipdex</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/shipdex/static/style.css" />
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/shipdex/">Shipdex&nbsp;&nbsp;<small>[beta]</small></a>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="/shipdex/">Ships</a></li>
+					<li class="active"><a href="/shipdex/e/">Equipment</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a id="report-link" href="https://github.com/KanColleTool/shipdex/issues" target="_blank">Report Issues</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+	
+
+<table class="table table-striped table-hover" id="all-ships">
+	<thead>
+		<th>Name</th>
+		<th>
+<img src="/shipdex/static/img/Icon_HP.png" alt="HP" title="HP" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Armor.png" alt="Armor" title="Armor" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Evasion.png" alt="Evasion" title="Evasion" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
+</th>
+		<!--<th>
+<img src="/shipdex/static/img/Icon_Luck.png" alt="Luck" title="Luck" />
+</th>-->
+		<!--<th>
+<img src="/shipdex/static/img/Icon_Speed.png" alt="Speed" title="Speed" />
+</th>-->
+		<th>
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
+</th>
+		<th>
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
+</th>
+	</thead>
+	<tbody>
+		<tr>
+			<th><a href="/shipdex/e/10cm_dp_gun_%28impr%29/">10cm DP Gun (Impr)</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/10cm_twin_dp_gun/">10cm Twin DP Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12.5inch%E9%80%A3%E8%A3%85%E5%89%AF%E7%A0%B2/">12.5inch連装副砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12.7cm_sgl_dp_gun/">12.7cm Sgl DP Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12.7cm_tw_cann.b-3/">12.7cm Tw Cann.B-3</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12.7cm_twin_cannon/">12.7cm Twin Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12.7cm_twin_dp_gun/">12.7cm Twin DP Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12.7mm_gun/">12.7mm Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12.7mm%E6%A9%9F%E9%8A%83/">12.7mm機銃</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12cm_rckt_launcher/">12cm Rckt Launcher</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/12cm_single_cannon_/">12cm Single Cannon </a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/14cm_single_cannon/">14cm Single Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/14inch%E9%80%A3%E8%A3%85%E7%A0%B2/">14inch連装砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/15.2cm_sgl_cannon/">15.2cm Sgl Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/15.2cm_twin_cannon/">15.2cm Twin Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/15.5cm_trip_cannon/">15.5cm Trip Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/15.5cm_trip_cannon/">15.5cm Trip Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/16inch%E4%B8%89%E9%80%A3%E8%A3%85%E7%A0%B2/">16inch三連装砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++20
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/16inch%E9%80%A3%E8%A3%85%E7%A0%B2/">16inch連装砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++15
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/20.3cm_twin_cannon/">20.3cm Twin Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/20.3cm%233_twin_cann./">20.3cm#3 Twin Cann.</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++9
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/20mm%E6%A9%9F%E9%8A%83/">20mm機銃</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/21inch%E9%AD%9A%E9%9B%B7%E5%89%8D%E6%9C%9F%E5%9E%8B/">21inch魚雷前期型</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/21inch%E9%AD%9A%E9%9B%B7%E5%BE%8C%E6%9C%9F%E5%9E%8B/">21inch魚雷後期型</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/25mm_single_gun/">25mm Single Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/25mm_triple_gun/">25mm Triple Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/25mm_twin_gun/">25mm Twin Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/35.6cm_twn_cannon/">35.6cm Twn Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++14
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/3inch%E5%8D%98%E8%A3%85%E9%AB%98%E8%A7%92%E7%A0%B2/">3inch単装高角砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/40mm%E4%BA%8C%E9%80%A3%E8%A3%85%E6%A9%9F%E9%96%A2%E7%A0%B2/">40mm二連装機関砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++8
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/40mm%E5%9B%9B%E9%80%A3%E8%A3%85%E6%A9%9F%E9%96%A2%E7%A0%B2/">40mm四連装機関砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++12
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/41cm_twin_cannon/">41cm Twin Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++20
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/46cm_triple_cannon/">46cm Triple Cannon</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++26
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/53cm_hull%28o2%29torp/">53cm Hull(O2)Torp</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++15
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/5inch%E5%8D%98%E8%A3%85%E7%A0%B2/">5inch単装砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/5inch%E5%8D%98%E8%A3%85%E9%AB%98%E5%B0%84%E7%A0%B2/">5inch単装高射砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/5inch%E5%8D%98%E8%A3%85%E9%AB%98%E5%B0%84%E7%A0%B2/">5inch単装高射砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/5inch%E9%80%A3%E8%A3%85%E7%A0%B2/">5inch連装砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/61cm_quad_torpedo_/">61cm Quad Torpedo </a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/61cm_quad%28o2%29torp/">61cm Quad(O2)Torp</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/61cm_quint%28o2%29torp/">61cm Quint(O2)Torp</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++12
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/61cm_triple_torpedo/">61cm Triple Torpedo</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/6inch%E5%8D%98%E8%A3%85%E7%A0%B2/">6inch単装砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/6inch%E9%80%A3%E8%A3%85%E9%80%9F%E5%B0%84%E7%A0%B2/">6inch連装速射砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/7.7mm_gun_/">7.7mm Gun </a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/8cm_dp_gun/">8cm DP Gun</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/8inch%E4%B8%89%E9%80%A3%E8%A3%85%E7%A0%B2/">8inch三連装砲</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++8
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/anti-torp_bulge%28med%29/">Anti-Torp Bulge(Med)</a></th>
+			<td>
+
+<img src="/shipdex/static/img/Icon_HP.png" alt="HP" title="HP" />
++5
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Armor.png" alt="Armor" title="Armor" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Evasion.png" alt="Evasion" title="Evasion" />
+-2
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/auspicious_clouds/">Auspicious Clouds</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++6
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++4
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/comet/">Comet</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++8
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/comet_model_12a/">Comet Model 12A</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++1
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++10
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/daihatsu_lc/">Daihatsu LC</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/enhcd_steam_engine/">Enhcd Steam Engine</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Evasion.png" alt="Evasion" title="Evasion" />
++10
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/heavenly_mountain/">Heavenly Mountain</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++1
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/impr_steam_turbine/">Impr Steam Turbine</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Evasion.png" alt="Evasion" title="Evasion" />
++6
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/iridescent_cloud/">Iridescent Cloud</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++9
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/ju_87c_mk.2/">Ju 87C Mk.2</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++9
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/magnificent_lghtng_mk.2/">Magnificent Lghtng Mk.2</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++15
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/meteor/">Meteor</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++1
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/meteor_mk.2/">Meteor Mk.2</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++13
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++2
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/prtyp_mountain_haze/">Prtyp Mountain Haze</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++6
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++11
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/repair_goddess/">Repair Goddess</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/repair_team/">Repair Team</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/strong_gale/">Strong Gale</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/strong_gale_mk.2/">Strong Gale Mk.2</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++12
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_0_observ_seaplane/">Typ 0 Observ Seaplane</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++6
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++1
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_0_rcn_seaplane/">Typ 0 Rcn Seaplane</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++1
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_2_recon_plane/">Typ 2 Recon Plane</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++7
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++3
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_21_zero_fighter/">Typ 21 Zero Fighter</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_22_surface_radar/">Typ 22 Surface Radar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++3
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_3_depth_charge/">Typ 3 Depth Charge</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++8
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_32_surface_radar/">Typ 32 Surface Radar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++10
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++8
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_33_surface_radar/">Typ 33 Surface Radar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++7
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++5
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_52_zero_fighter/">Typ 52 Zero Fighter</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_94_depth_charge/">Typ 94 Depth Charge</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_97_torp_bomber/">Typ 97 Torp Bomber</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++1
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/typ_99_dive_bomber/">Typ 99 Dive Bomber</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++5
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_13_air_radar/">Type 13 Air Radar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++3
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_14_air_radar/">Type 14 Air Radar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++4
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_21_air_radar/">Type 21 Air Radar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++4
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_3_asw_plane/">Type 3 ASW Plane</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++1
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_3_shell/">Type 3 Shell</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_3_sonar/">Type 3 Sonar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++2
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_62_zero_f/b/">Type 62 Zero F/B</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++4
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++3
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++4
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_91_ap_shell/">Type 91 AP Shell</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++8
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_93_sonar/">Type 93 Sonar</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_96_fighter/">Type 96 Fighter</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_a_minisub/">Type A Minisub</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++12
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/type_k_autogyro/">Type K Autogyro</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++9
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++1
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/violet_lightning_mk.3/">Violet Lightning Mk.3</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++9
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E5%8A%A3%E5%8C%96%E5%BE%B9%E7%94%B2%E5%BC%BE/">劣化徹甲弾</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Firepower.png" alt="Firepower" title="Firepower" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++5
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E5%A2%97%E8%A8%AD%E3%83%90%E3%83%AB%E3%82%B8%28%E5%A4%A7%E5%9E%8B%E8%89%A6%29/">増設バルジ(大型艦)</a></th>
+			<td>
+
+<img src="/shipdex/static/img/Icon_HP.png" alt="HP" title="HP" />
++8
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Armor.png" alt="Armor" title="Armor" />
++8
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Evasion.png" alt="Evasion" title="Evasion" />
+-3
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E5%AF%BE%E7%A9%BA%E3%83%AC%E3%83%BC%E3%83%80%E2%80%95_mark.i/">対空レーダ― Mark.I</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++5
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E5%AF%BE%E7%A9%BA%E3%83%AC%E3%83%BC%E3%83%80%E2%80%95_mark.ii/">対空レーダ― Mark.II</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++10
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++5
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E5%AF%BE%E7%A9%BA%E3%83%AC%E3%83%BC%E3%83%80%E2%80%95_mark.iii/">対空レーダ― Mark.III</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++15
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++10
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++10
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E5%AF%BE%E7%A9%BA%E6%95%A3%E5%BC%BE/">対空散弾</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E5%BC%B7%E5%8C%96%E5%9E%8B%E6%B7%B1%E6%B5%B7%E7%BC%B6/">強化型深海缶</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Evasion.png" alt="Evasion" title="Evasion" />
++15
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%94%B9%E8%89%AF%E5%9E%8B%E6%B7%B1%E6%B5%B7%E3%82%BF%E3%83%BC%E3%83%93%E3%83%B3/">改良型深海タービン</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Evasion.png" alt="Evasion" title="Evasion" />
++10
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B0%B4%E4%B8%8A%E3%83%AC%E3%83%BC%E3%83%80%E2%80%95_mark.i/">水上レーダ― Mark.I</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++10
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B0%B4%E4%B8%8A%E3%83%AC%E3%83%BC%E3%83%80%E2%80%95_mark.ii/">水上レーダ― Mark.II</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++10
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++15
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B0%B4%E4%B8%8A%E3%83%AC%E3%83%BC%E3%83%80%E2%80%95_mark.iii/">水上レーダ― Mark.III</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++15
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Accuracy.png" alt="Accuracy" title="Accuracy" />
++20
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E3%82%BD%E3%83%8A%E3%83%BC/">深海ソナー</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++9
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E5%81%B5%E5%AF%9F%E6%A9%9F/">深海棲艦偵察機</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++1
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++1
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E6%88%A6/">深海棲艦戦</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E6%88%A6_mark.ii/">深海棲艦戦 Mark.II</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++5
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E6%88%A6_mark.iii/">深海棲艦戦 Mark.III</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E6%94%BB/">深海棲艦攻</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E6%94%BB_mark.ii/">深海棲艦攻 Mark.II</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++4
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E6%94%BB_mark.iii/">深海棲艦攻 Mark.III</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++6
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++5
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E7%88%86/">深海棲艦爆</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++3
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E6%A3%B2%E8%89%A6%E7%88%86_mark.ii/">深海棲艦爆 Mark.II</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++6
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E7%83%8F%E8%B3%8A%E9%AD%9A%E9%9B%B7/">深海烏賊魚雷</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++12
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E6%B7%B1%E6%B5%B7%E7%88%86%E9%9B%B7%E6%8A%95%E5%B0%84%E6%A9%9F/">深海爆雷投射機</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++7
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E9%A3%9B%E3%81%B3%E9%AD%9A%E5%81%B5%E5%AF%9F%E6%A9%9F/">飛び魚偵察機</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++2
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Sub.png" alt="Anti-Sub" title="Anti-Sub" />
++2
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Line_of_Sight.png" alt="Line of Sight" title="Line of Sight" />
++10
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Dive_Bomber_Attack.png" alt="Dive Bomber Attack" title="Dive Bomber Attack" />
++4
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E9%A3%9B%E3%81%B3%E9%AD%9A%E8%89%A6%E6%88%A6/">飛び魚艦戦</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Anti-Air.png" alt="Anti-Air" title="Anti-Air" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		<tr>
+			<th><a href="/shipdex/e/%E9%AB%98%E9%80%9F%E6%B7%B1%E6%B5%B7%E9%AD%9A%E9%9B%B7/">高速深海魚雷</a></th>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+<img src="/shipdex/static/img/Icon_Torpedo.png" alt="Torpedo" title="Torpedo" />
++10
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+			<!--<td>
+
+</td>-->
+			<!--<td>
+
+</td>-->
+			<td>
+
+<img src="/shipdex/static/img/Icon_Range.png" alt="Range" title="Range" />
++1
+</td>
+			<td>
+
+</td>
+			<td>
+
+</td>
+		</li>
+		
+	</tbody>
+</table>
+
+	
+	</div>
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
