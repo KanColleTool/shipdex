@@ -1,5 +1,5 @@
 from operator import itemgetter
-from flask import Flask, render_template, url_for, g
+from flask import Flask, render_template, redirect, url_for, g
 from util import *
 from tplhelpers import *
 
@@ -39,6 +39,10 @@ def index():
 	
 	shiplist = sorted(filtered_ships.values(), key=itemgetter('api_name'))
 	return render_template('index.html', ships=shiplist, breadcrumb=['Home'])
+
+@app.route('/s/')
+def ships():
+	return redirect(url_for('index'))
 
 @app.route('/s/<name>/')
 def ship(name):
