@@ -41,13 +41,25 @@ def ships():
 		if afterid != '0' and afterid in filtered_ships:
 			del filtered_ships[afterid]
 	
-	shiplist = sorted(filtered_ships.values(), key=itemgetter('api_name'))
+	shiplist = sorted(filtered_ships.itervalues(), key=itemgetter('api_name'))
 	return render_template('ships.html', ships=shiplist)
 
 @app.route('/s/<name>/')
 def ship(name):
 	ship = load_data('cache', u'ships/{name}.json'.format(name=normalize_name(name)))
 	return render_template('ship.html', ship=ship)
+
+@app.route('/e/')
+def equips():
+	equips = load_data('cache', 'equips.json')
+	equiplist = sorted(equips.itervalues(), key=itemgetter('api_name'))
+	return render_template('equips.html', equips=equiplist)
+
+@app.route('/e/<name>/')
+def equip(name):
+	return "Not Yet Implemented"
+	#equip = load_data('cache', u'equips/{name}.json'.format(name=normalize_name(name)))
+	#return render_template('equip.html', equip=equip)
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')

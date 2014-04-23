@@ -24,6 +24,7 @@
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li{% if tab == 'ships' %} class="active"{% endif %}><a href="{{ url_for('index') }}">Ships</a></li>
+					<li{% if tab == 'equips' %} class="active"{% endif %}><a href="{{ url_for('equips') }}">Equipment</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a id="report-link" href="https://github.com/KanColleTool/shipdex/issues" target="_blank">Report Issues</a></li>

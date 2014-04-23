@@ -86,7 +86,6 @@ def build_ship_cache():
 			del baseships[ship['api_aftershipid']]
 	
 	# Collect all ships of the same 'evolutionary line' together
-	family_counter = 0
 	for ship in baseships.itervalues():
 		line = []
 		current_item = ship
@@ -96,15 +95,23 @@ def build_ship_cache():
 				current_item = ships[int(current_item['api_aftershipid'])]
 			else:
 				break
-		family_counter = family_counter + 1
 		save_data('cache', line, u'ships/{name}.json'.format(name=normalize_name(ship['api_name'])))
-	print "-> {count} ship data files written".format(count=family_counter)
 	
 	save_data('cache', ships, 'ships.json')
-	print "-> Index written"
+
+def build_equipment_cache():
+	print "Compiling equipment data..."
+	raw_equips = load_data(u'cache', u'api_get_master/slotitem.json')
+	equips = {}
+	
+	for item in raw_equips:
+		equips[item['api_id']] = item
+	
+	save_data('cache', equips, 'equips.json')
 
 
 
 if __name__ == '__main__':
 	build_translation_cache()
 	build_ship_cache()
+	build_equipment_cache()

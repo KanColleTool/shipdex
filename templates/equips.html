@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% set tab = 'equips' %}
+{% import "_macros.html" as m %}
+{% macro printstat(stat, num) %}
+{% if num == 0 %}{% elif num > 0 %}{{ m.statimg(stat) }}+{{ num }}{% else %}{{ m.statimg(stat) }}-{{ num|abs }}{% endif %}
+{% endmacro %}
+{% block content %}
+<table class="table table-striped table-hover" id="all-ships">
+	<thead>
+		<th>Name</th>
+		<th>{{ m.statimg("HP") }}</th>
+		<th>{{ m.statimg("Armor") }}</th>
+		<th>{{ m.statimg("Firepower") }}</th>
+		<th>{{ m.statimg("Torpedo") }}</th>
+		<th>{{ m.statimg("Anti-Air") }}</th>
+		<th>{{ m.statimg("Anti-Sub") }}</th>
+		<th>{{ m.statimg("Evasion") }}</th>
+		<th>{{ m.statimg("Line of Sight") }}</th>
+		<!--<th>{{ m.statimg("Luck") }}</th>-->
+		<!--<th>{{ m.statimg("Speed") }}</th>-->
+		<th>{{ m.statimg("Range") }}</th>
+		<th>{{ m.statimg("Accuracy") }}</th>
+		<th>{{ m.statimg("Dive Bomber Attack") }}</th>
+	</thead>
+	<tbody>
+		{% for equip in equips -%}
+		<tr>
+			<th><a href="{{ url_for('equip', name=normalize_name(equip.api_name)) }}">{{ equip.api_name }}</a></th>
+			<td>{{ printstat("HP", equip.api_souk) }}</td>
+			<td>{{ printstat("Armor", equip.api_souk) }}</td>
+			<td>{{ printstat("Firepower", equip.api_houg) }}</td>
+			<td>{{ printstat("Torpedo", equip.api_raig) }}</td>
+			<td>{{ printstat("Anti-Air", equip.api_tyku) }}</td>
+			<td>{{ printstat("Anti-Sub", equip.api_tais) }}</td>
+			<td>{{ printstat("Evasion", equip.api_houk) }}</td>
+			<td>{{ printstat("Line of Sight", equip.api_saku) }}</td>
+			<!--<td>{{ printstat("Luck", equip.api_luck) }}</td>-->
+			<!--<td>{{ printstat("Speed", equip.api_soku) }}</td>-->
+			<td>{{ printstat("Range", equip.api_leng) }}</td>
+			<td>{{ printstat("Accuracy", equip.api_houm) }}</td>
+			<td>{{ printstat("Dive Bomber Attack", equip.api_baku) }}</td>
+		</li>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
