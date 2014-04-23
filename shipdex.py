@@ -38,7 +38,7 @@ def index():
 			del filtered_ships[afterid]
 	
 	shiplist = sorted(filtered_ships.values(), key=itemgetter('api_name'))
-	return render_template('index.html', ships=shiplist, breadcrumb=['Home'])
+	return render_template('index.html', ships=shiplist)
 
 @app.route('/s/')
 def ships():
@@ -47,7 +47,7 @@ def ships():
 @app.route('/s/<name>/')
 def ship(name):
 	ship = load_data('cache', u'ships/{name}.json'.format(name=normalize_name(name)))
-	return render_template('ship.html', ship=ship, breadcrumb=[(url_for('index'), 'Home'), ship[0]['api_name']])
+	return render_template('ship.html', ship=ship)
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')
