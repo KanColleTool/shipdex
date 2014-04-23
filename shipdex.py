@@ -17,6 +17,10 @@ def expose_functions():
 
 @app.route('/')
 def index():
+	return ships()
+
+@app.route('/s/')
+def ships():
 	ships = load_data('cache', 'ships.json')
 	filtered_ships = {}
 	
@@ -38,11 +42,7 @@ def index():
 			del filtered_ships[afterid]
 	
 	shiplist = sorted(filtered_ships.values(), key=itemgetter('api_name'))
-	return render_template('index.html', ships=shiplist)
-
-@app.route('/s/')
-def ships():
-	return redirect(url_for('index'))
+	return render_template('ships.html', ships=shiplist)
 
 @app.route('/s/<name>/')
 def ship(name):
