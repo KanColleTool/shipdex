@@ -106,6 +106,10 @@ def build_equipment_cache():
 	equips = {}
 	
 	for item in raw_equips:
+		# Items with no description are enemy-only
+		if item['api_info'] == '':
+			continue
+		
 		equips[item['api_id']] = item
 		save_data(u'cache', item, u'equips/{name}.json'.format(name=normalize_name(item['api_name'])))
 	
