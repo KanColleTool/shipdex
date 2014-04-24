@@ -2,10 +2,10 @@
 {% set tab = 'equips' %}
 {% import "_macros.html" as m %}
 {% macro printstat(stat, num) %}
-{% if num == 0 %}{% elif num > 0 %}{{ m.statimg(stat) }}+{{ num }}{% else %}{{ m.statimg(stat) }}-{{ num|abs }}{% endif %}
+{% if num != 0 %}{{ m.statimg(stat) }} {% if num > 0 %}+{% else %}-{% endif %}{{ num|abs }}{% endif %}
 {% endmacro %}
 {% block content %}
-<table class="table table-striped table-hover col-md-12" id="all-ships">
+<table class="table table-striped table-hover stats col-md-12" id="all-ships">
 	<thead>
 		<th>Name</th>
 		<th>{{ m.statimg("HP") }}</th>
