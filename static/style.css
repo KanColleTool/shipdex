@@ -20,8 +20,18 @@
 	}
 }
 
-@media (max-width: 768px) {
-	#all-ships thead, #all-ships td {
+@media (max-width: 991px) {
+	.table-collapse td img {
 		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.table-collapse thead, .table-collapse td {
+		display: none;
+	}
+	.table-collapse th {
+		font-size: 150%;
+		font-weight: 200;
 	}
 }
