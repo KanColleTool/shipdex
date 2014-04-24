@@ -95,19 +95,21 @@ def build_ship_cache():
 				current_item = ships[int(current_item['api_aftershipid'])]
 			else:
 				break
-		save_data('cache', line, u'ships/{name}.json'.format(name=normalize_name(ship['api_name'])))
+		save_data(u'cache', line, u'ships/{name}.json'.format(name=normalize_name(ship['api_name'])))
 	
-	save_data('cache', ships, 'ships.json')
+	save_data(u'cache', ships, u'ships.json')
 
 def build_equipment_cache():
 	print "Compiling equipment data..."
+	
 	raw_equips = load_data(u'cache', u'api_get_master/slotitem.json')
 	equips = {}
 	
 	for item in raw_equips:
 		equips[item['api_id']] = item
+		save_data(u'cache', item, u'equips/{name}.json'.format(name=normalize_name(item['api_name'])))
 	
-	save_data('cache', equips, 'equips.json')
+	save_data(u'cache', equips, u'equips.json')
 
 
 
