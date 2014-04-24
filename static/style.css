@@ -2,10 +2,10 @@
 	font-size: 85%;
 }
 
-#all-ships tbody th {
+.list-table tbody th {
 	padding: 0;
 }
-#all-ships th a {
+.list-table th a {
 	display: block;
 	padding: 8px;
 }
