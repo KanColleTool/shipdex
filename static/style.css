@@ -10,8 +10,17 @@
 	padding: 8px;
 }
 
+.stats th {
+	text-align: right;
+}
 .stats th, .stats td {
 	white-space: nowrap;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+	.ship {
+		max-width: 400px;
+	}
 }
 
 @media (max-width: 768px) {
