@@ -10,6 +10,10 @@
 	padding: 8px;
 }
 
+.stats th, .stats td {
+	white-space: nowrap;
+}
+
 @media (max-width: 768px) {
 	#all-ships thead, #all-ships td {
 		display: none;

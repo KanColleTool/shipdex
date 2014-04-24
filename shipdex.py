@@ -57,9 +57,8 @@ def equips():
 
 @app.route('/e/<name>/')
 def equip(name):
-	return "Not Yet Implemented"
-	#equip = load_data('cache', u'equips/{name}.json'.format(name=normalize_name(name)))
-	#return render_template('equip.html', equip=equip)
+	equip = load_data('cache', u'equips/{name}.json'.format(name=normalize_name(name)))
+	return render_template('equip.html', equip=equip)
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')

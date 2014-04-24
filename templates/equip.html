@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% set tab = 'equips' %}
+{% import "_macros.html" as m %}
+{% block title %}{{ equip.api_name }} | Shipdex{% endblock %}
+{% block content %}
+
+<div class="equip">
+	<header>
+		<h2>{{ equip.api_name }}</h2>
+	</header>
+	
+	<table class="table stats">
+		{% for key, stat in {'api_souk': 'HP', 'api_souk': 'Armor', 'api_houg': 'Firepower', 'api_raig': 'Torpedo', 'api_tyku': 'Anti-Air', 'api_tais': 'Anti-Sub', 'api_houk': 'Evasion', 'api_saku': 'Line of Sight', 'api_leng': 'Range', 'api_houm': 'Accuracy', 'api_baku': 'Dive Bomber Attack'}.iteritems() %}
+			{%- if equip[key] != 0 %}
+				<tr>
+					<th>{{ m.statimg(stat) }} {{ stat }}</th>
+					<td>{% if equip[key] > 0 %}+{% else %}-{% endif %} {{ equip[key]|abs }}</td>
+					<td width="100%" />
+				</tr>
+			{%- endif %}
+		{%- endfor %}
+	</table>
+	
+	<p>
+		{{ equip.api_info|safe }}
+	</p>
+</div>
+
+{% endblock %}
