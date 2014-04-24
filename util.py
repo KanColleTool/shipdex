@@ -7,7 +7,16 @@ def strip_prefix(prefix, s):
 	return s if not s.startswith(prefix) else s[len(prefix):]
 
 def normalize_name(name):
-	return name.lower().replace(' ', '_')
+	replacements = {
+		'#': '_n',
+		'.': '',
+		'/': '',
+		' ': '_'
+	}
+	name = name.lower()
+	for before, after in replacements.iteritems():
+		name = name.replace(before, after)
+	return name
 
 def save_data(basedir, data, filename, pretty=True):
 	outpath = os.path.join(ROOT_PATH, basedir, filename)
