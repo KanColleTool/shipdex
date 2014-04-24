@@ -10,7 +10,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-static-top" role="navigation">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
@@ -18,12 +18,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ url_for('index') }}">Shipdex&nbsp;&nbsp;<small>[beta]</small></a>
+				<a class="navbar-brand">Shipdex&nbsp;&nbsp;<small>[beta]</small></a>
 			</div>
 			
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li{% if tab == 'ships' %} class="active"{% endif %}><a href="{{ url_for('index') }}">Ships</a></li>
+					<li{% if tab == 'ships' %} class="active"{% endif %}><a href="{{ url_for('ships') }}">Ships</a></li>
 					<li{% if tab == 'equips' %} class="active"{% endif %}><a href="{{ url_for('equips') }}">Equipment</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -33,7 +33,7 @@
 		</div>
 	</nav>
 	
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 {% block content %}
 			<div class="col-md-12">

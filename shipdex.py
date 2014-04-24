@@ -17,7 +17,7 @@ def expose_functions():
 
 @app.route('/')
 def index():
-	return ships()
+	return render_template('redirect.html', target_url=url_for('ships'))
 
 @app.route('/s/')
 def ships():
