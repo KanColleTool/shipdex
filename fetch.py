@@ -47,7 +47,7 @@ def fetch_translation():
 
 def fetch_endpoint(endpoint, save=True):
 	r = s.post('http://%s/kcsapi/%s' % (KANCOLLE_API_SERVER, endpoint), data={'api_token': KANCOLLE_API_TOKEN, 'api_verno': 1});
-	data = json.loads(strip_prefix('svdata=', r.text).decode('unicode-escape'))
+	data = json.loads(strip_prefix(ur'svdata=', r.text))
 	
 	if save:
 		save_data('data', data, endpoint + '.json')
@@ -56,4 +56,4 @@ def fetch_endpoint(endpoint, save=True):
 
 if __name__ == '__main__':
 	fetch_translation()
-	fetch_endpoint('api_get_master/ship')
+	fetch_endpoint('api_start2')
