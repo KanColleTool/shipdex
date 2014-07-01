@@ -11,7 +11,7 @@ def build_ship_cache():
 	
 	# Exclude なし (placeholder) ships, alternate forms and old event ships
 	# Note that these are regex patterns, not string literals
-	excluded_name = [ur'なし', ur'S-Naka']
+	excluded_name = [ur'なし', ur'S那珂']
 	excluded_yomi = [ur'アル(.*)', ur'mist(.*)']
 	
 	# Compile them
