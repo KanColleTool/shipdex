@@ -6,7 +6,7 @@
 
 <div class="equip col-md-12">
 	<header>
-		<h2>{{ equip.api_name }}</h2>
+		<h2>{{ translate(equip.api_name) }}</h2>
 	</header>
 	
 	<table class="table stats">
@@ -23,7 +23,7 @@
 	</table>
 	
 	<p>
-		{{ equip.api_info|safe }}
+		{{ translate(equip.api_info)|safe }}
 	</p>
 </div>
 

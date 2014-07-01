@@ -1,7 +1,31 @@
 import os
 import json
+import zlib
 
 ROOT_PATH = unicode(os.path.dirname(os.path.abspath(__file__)))
+
+tldata = None
+
+def translate(thing):
+	global tldata
+	if tldata is None:
+		load_translation_data()
+	
+	if isinstance(thing, dict):
+		for key, value in thing.iteritems():
+			thing[key] = translate(value)
+	elif isinstance(thing, list):
+		return [translate(item) for item in thing]
+	elif isinstance(thing, str) or isinstance(thing, unicode):
+		crc = str(zlib.crc32(thing.encode('utf-8')) & 0xFFFFFFFF)
+		if crc in tldata:
+			return tldata[crc] or thing
+	return thing
+
+def load_translation_data():
+	global tldata
+	with open(os.path.join(ROOT_PATH, u'data', u'translation.json')) as f:
+		tldata = json.loads(f.read())
 
 def strip_prefix(prefix, s):
 	return s if not s.startswith(prefix) else s[len(prefix):]

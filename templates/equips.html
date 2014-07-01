@@ -25,7 +25,7 @@
 	<tbody>
 		{% for equip in equips -%}
 		<tr>
-			<th><a href="{{ url_for('equip', name=normalize_name(equip.api_name)) }}">{{ equip.api_name }}</a></th>
+			<th><a href="{{ url_for('equip', name=normalize_name(translate(equip.api_name))) }}">{{ translate(equip.api_name) }}</a></th>
 			<td>{{ printstat("HP", equip.api_souk) }}</td>
 			<td>{{ printstat("Armor", equip.api_souk) }}</td>
 			<td>{{ printstat("Firepower", equip.api_houg) }}</td>

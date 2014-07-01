@@ -10,6 +10,7 @@ app.config.from_object('config')
 def expose_functions():
 	return {
 		'normalize_name': normalize_name,
+		'translate': translate,
 		'sum': sum,
 		'speed_string': speed_string,
 		'range_string': range_string
