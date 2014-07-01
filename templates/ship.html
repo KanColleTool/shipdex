@@ -20,6 +20,8 @@
 		{% if translate(ship.0.api_name) != ship.0.api_name -%}
 		<li><a href="http://kancolle.wikia.com/wiki/{{ translate(ship.0.api_name) }}">English Wiki</a></li>
 		{%- endif %}
+		<li><a href="http://danbooru.donmai.us/posts?utf8=%E2%9C%93&amp;tags={{ normalize_name(translate(ship.0.api_name)) }}_(kantai_collection)">Danbooru</a></li>
+		<li><a href="http://www.pixiv.net/search.php?s_mode=s_tag&amp;word={{ ship.0.api_name }}">Pixiv</a></li>
 	</ul>
 </div>
 
