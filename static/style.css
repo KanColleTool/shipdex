@@ -22,6 +22,7 @@ h5 {
 
 .stats th, .stats td {
 	white-space: nowrap;
+	vertical-align: middle !important;
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
