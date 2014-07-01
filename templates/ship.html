@@ -11,8 +11,16 @@
 {% endfor %}
 </div>
 
-<p class="col-md-12">
-	{{ translate(ship.0.api_sinfo)|safe }}
-</p>
+<div class="col-md-12">
+	<h5>Description</h5>
+	<p>{{ translate(ship.0.api_sinfo)|safe }}</p>
+	
+	<h5>Links</h5>
+	<ul>
+		{% if translate(ship.0.api_name) != ship.0.api_name -%}
+		<li><a href="http://kancolle.wikia.com/wiki/{{ translate(ship.0.api_name) }}">English Wiki</a></li>
+		{%- endif %}
+	</ul>
+</div>
 
 {% endblock %}
