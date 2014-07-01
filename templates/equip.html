@@ -4,7 +4,7 @@
 {% block title %}{{ equip.api_name }} | Shipdex{% endblock %}
 {% block content %}
 
-<div class="equip col-md-12">
+<div class="equip col-md-3 col-sm-6">
 	<header>
 		<h2>{{ translate(equip.api_name) }}</h2>
 	</header>
@@ -21,10 +21,10 @@
 			{%- endif %}
 		{%- endfor %}
 	</table>
-	
-	<p>
-		{{ translate(equip.api_info)|safe }}
-	</p>
 </div>
+
+<p class="col-md-12">
+	{{ translate(equip.api_info)|safe }}
+</p>
 
 {% endblock %}
