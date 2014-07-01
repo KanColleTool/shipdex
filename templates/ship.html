@@ -3,10 +3,16 @@
 {% block title %}{{ ship[0].api_name }} | Shipdex{% endblock %}
 {% block content %}
 
+<div class="clearfix">
 {% for stage in ship %}
 {% with ship=stage %}
 	{% include "_ship.html" %}
 {% endwith %}
 {% endfor %}
+</div>
+
+<p class="col-md-12">
+	{{ translate(ship.0.api_sinfo)|safe }}
+</p>
 
 {% endblock %}
