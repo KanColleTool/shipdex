@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from operator import itemgetter
 from flask import Flask, render_template, redirect, url_for, g
 from util import *

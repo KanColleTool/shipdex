@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from flask_frozen import Freezer
 from shipdex import app
 
